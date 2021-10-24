@@ -72,9 +72,9 @@ function corrigeNome(database) {
 function corrigePreco(database) {
     for (let i = 0; i < database.length; i++) {
         if (typeof database[i]['price'] == "string") {
-            let toInt = parseInt(database[i]['price'])
-            if (!isNaN(toInt))
-                database[i]['price'] = parseInt(database[i]['price'])
+            let toFloat = parseFloat(database[i]['price'])
+            if (!isNaN(toFloat))
+                database[i]['price'] = parseFloat(database[i]['price'])
         }   
     }
 }
